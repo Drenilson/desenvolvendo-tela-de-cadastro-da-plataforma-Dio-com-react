@@ -60,23 +60,37 @@ export const SubtitleRegister = styled.p`
     margin-bottom: 35px;
 `
 
+export const Section = styled.section`
+    margin-top: 20px;
+    margin-bottom: 20px;
+`
 
-export const EsqueciText  = styled.p`
+export const P  = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-
+    
     color: #E5E044;
 ` 
-
-export const CriarText =  styled.p`
+export const Paragraph = styled.p`
+    display: inline;
+    margin: 0;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+    color: #FFFFF;
+`
 
+export const FazerLogin = styled.span`
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
     color: #23DD7A;
+    cursor: pointer;
 `

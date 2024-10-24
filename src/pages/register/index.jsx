@@ -5,7 +5,7 @@ import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { api } from '../../services/api';
 import { useForm } from "react-hook-form";
-import { Container, Title, Column, TitleRegister, SubtitleRegister, Row, Wrapper, Paragraph } from './styles';
+import { P, Paragraph, Container, Title, Section, Column, TitleRegister, SubtitleRegister, Wrapper, FazerLogin } from './styles';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -69,16 +69,21 @@ const Register = () => {
                             />
                             {errors.senha && <span>{errors.senha.message}</span>}
                             
-                            <Button title="Cadastrar" variant="secondary" type="submit" />
+                            <Button title="Cadastrar" variant="secondary" type="submit"/>
                         </form>
-
-                        <Paragraph type="text">Ao clicar em "criar minha conta grátis", declaro que 
-                            aceito as Políticas de Privacidade e os Termos de Uso da DIO.<Paragraph/>
                         
-                        <Row>
-                            <EsqueciText>Esqueci minha senha</EsqueciText>
-                            <CriarText>Criar Conta</CriarText>
-                        </Row>
+                        <Section>
+                            <P>Ao clicar em "criar minha conta grátis", declaro que 
+                            aceito as Políticas de Privacidade e os Termos de Uso da DIO.</P>
+                        </Section>
+
+                        <div>
+                            <Paragraph>
+                                Já tenho uma conta.
+                                <FazerLogin onClick={() => navigate('/login')}> Fazer login</FazerLogin>
+                            </Paragraph>
+                        </div>
+
                     </Wrapper>
                 </Column>
             </Container>

@@ -29,12 +29,13 @@ const Login = () => {
             }
 
             alert('Usuário ou senha inválido')
+            
         }catch(e){
-            //TODO: HOUVE UM ERRO
+            alert('Houve um erro ao cadastrar. Tente novamente.');
+            console.log('errors', errors);
         }
     };
 
-    console.log('errors', errors);
 
     return (<>
         <Header />
